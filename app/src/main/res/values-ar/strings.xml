@@ -106,7 +106,7 @@
     <string name="sig_unrecorded">غير مسجّل بعد. سيتحقّق النظام من التحديثات بمقارنتها مع النسخة المثبّتة لديك.</string>
     <string name="sig_checked">تم التحقّق من مطابقته لتوقيع المطوّر قبل التثبيت</string>
     <string name="sig_mismatch">يختلف عن توقيع المطوّر الأصلي. تم إيقاف التحديثات.</string>
-    <string name="sig_ignored">اخترت تجاهل هذا التوقيع. ينبّهك Open Shelf مجدداً إذا ظهر توقيع مختلف.</string>
+    <string name="sig_ignored">تم تجاهله لهذا التطبيق. ينبّه مجدداً عند تغيّره.</string>
     <string name="key_ignore">تجاهل لهذا التطبيق</string>
     <string name="key_check_on">إعادة تفعيل الفحص</string>
     <string name="sig_sibling">شاشتك فيها نسخة %1$s. احذفها لتتمكّن من التحوّل لهذه النسخة.</string>

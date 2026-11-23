@@ -120,7 +120,7 @@
     <string name="sig_unrecorded">Not recorded yet. Android still checks updates against your installed copy.</string>
     <string name="sig_checked">Checked against the developer’s key before install</string>
     <string name="sig_mismatch">Different from the developer’s key. Updates are held.</string>
-    <string name="sig_ignored">You chose to ignore this key. Open Shelf warns again if a different key turns up.</string>
+    <string name="sig_ignored">Ignored for this app. Warns again if it changes.</string>
     <string name="key_ignore">Ignore for this app</string>
     <string name="key_check_on">Turn check back on</string>
     <string name="sig_sibling">This TV has the %1$s build. Uninstall it to switch.</string>

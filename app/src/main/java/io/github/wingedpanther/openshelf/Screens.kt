@@ -901,8 +901,6 @@ private fun AppPage(app: App, openApp: (String) -> Unit, handoff: FocusHandoff) 
             Row(Modifier.padding(top = 10.dp).offset(x = (-4).dp), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 InstallButton(app, requester = handoff.target)
                 if (installed != null && !Installer.busy(app.id)) Pill(if (installed.versionCode < app.versionCode) "" else str(R.string.uninstall), { uninstall(ctx, app.pkg) }, icon = Icons.Trash)
-                if (acceptable != null && !Installer.busy(app.id)) Pill(str(R.string.key_ignore), { Prefs.acceptKey(app.pkg, acceptable); Installer.jobs.remove(app.id); Device.tick++ }, icon = Icons.Shield)
-                else if (Prefs.acceptedKeys[app.pkg] != null) Pill(str(R.string.key_check_on), { Prefs.forgetKey(app.pkg); Device.tick++ }, icon = Icons.ShieldAlert)
                 if ((Installer.jobs[app.id] as? Job.Failed)?.message?.let(Help::applies) == true) Pill(str(R.string.help_action), { showHelp = true }, icon = Icons.Help)
             }
             JobNote(app, Modifier.padding(top = 6.dp), helpButton = false)
@@ -937,6 +935,8 @@ private fun AppPage(app: App, openApp: (String) -> Unit, handoff: FocusHandoff) 
                 Modifier.padding(top = 14.dp).offset(x = (-4).dp),
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
+                if (acceptable != null && !Installer.busy(app.id)) Pill(str(R.string.key_ignore), { Prefs.acceptKey(app.pkg, acceptable); Installer.jobs.remove(app.id); Device.tick++ }, icon = Icons.Shield)
+                else if (Prefs.acceptedKeys[app.pkg] != null) Pill(str(R.string.key_check_on), { Prefs.forgetKey(app.pkg); Device.tick++ }, icon = Icons.ShieldAlert)
                 if (browser) Pill("GitHub", { openRepo(ctx, app.repo) }, icon = Icons.Link)
                 if (notes != null) Pill(str(R.string.whats_new_short), { showNotes = true })
                 if (permissions.isNotEmpty()) Pill(str(R.string.permissions_action), { showPermissions = true })

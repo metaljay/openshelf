@@ -118,7 +118,7 @@
     <string name="sig_unrecorded">尚未記錄。Android 仍會根據你已安裝的副本來檢查更新。</string>
     <string name="sig_checked">安裝前已對照開發者金鑰進行檢查</string>
     <string name="sig_mismatch">與開發者金鑰不同，更新已暫停。</string>
-    <string name="sig_ignored">你已選擇忽略此金鑰。如果出現不同的金鑰，Open Shelf 會再次提醒。</string>
+    <string name="sig_ignored">已忽略此金鑰，變更時再提醒。</string>
     <string name="key_ignore">對此應用程式忽略</string>
     <string name="key_check_on">重新開啟檢查</string>
     <string name="sig_sibling">這台電視上是 %1$s 版本，解除安裝後才能切換。</string>

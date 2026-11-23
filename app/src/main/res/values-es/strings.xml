@@ -102,7 +102,7 @@
     <string name="sig_unrecorded">Aún no se ha registrado. Android sigue comprobando las actualizaciones con la copia instalada.</string>
     <string name="sig_checked">Comprobada con la clave del desarrollador antes de instalar</string>
     <string name="sig_mismatch">Distinta de la clave del desarrollador. Las actualizaciones están retenidas.</string>
-    <string name="sig_ignored">Elegiste ignorar esta clave. Open Shelf avisa de nuevo si aparece una clave distinta.</string>
+    <string name="sig_ignored">Ignorada para esta app. Avisa de nuevo si cambia.</string>
     <string name="key_ignore">Ignorar para esta app</string>
     <string name="key_check_on">Reactivar la comprobación</string>
     <string name="sig_sibling">Este televisor tiene la compilación %1$s. Desinstálala para cambiar.</string>

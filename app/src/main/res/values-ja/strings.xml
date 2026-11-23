@@ -118,7 +118,7 @@
     <string name="sig_unrecorded">まだ記録されていません。Androidはインストール済みのコピーに対して更新を確認します。</string>
     <string name="sig_checked">インストール前に開発者のキーと照合</string>
     <string name="sig_mismatch">開発者のキーと異なります。更新は保留されています。</string>
-    <string name="sig_ignored">このキーを無視するよう設定しました。別のキーが見つかった場合、Open Shelfは再び警告します。</string>
+    <string name="sig_ignored">このアプリでは無視中。変更時は再警告します。</string>
     <string name="key_ignore">このアプリでは無視</string>
     <string name="key_check_on">チェックを再開</string>
     <string name="sig_sibling">このテレビには%1$sビルドがあります。切り替えるにはアンインストールしてください。</string>
