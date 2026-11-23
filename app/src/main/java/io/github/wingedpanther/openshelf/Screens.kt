@@ -935,8 +935,12 @@ private fun AppPage(app: App, openApp: (String) -> Unit, handoff: FocusHandoff) 
                 Modifier.padding(top = 14.dp).offset(x = (-4).dp),
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                if (acceptable != null && !Installer.busy(app.id)) Pill(str(R.string.key_ignore), { Prefs.acceptKey(app.pkg, acceptable); Installer.jobs.remove(app.id); Device.tick++ }, icon = Icons.Shield)
-                else if (Prefs.acceptedKeys[app.pkg] != null) Pill(str(R.string.key_check_on), { Prefs.forgetKey(app.pkg); Device.tick++ }, icon = Icons.ShieldAlert)
+                val ignoring = acceptable != null && !Installer.busy(app.id)
+                if (ignoring || Prefs.acceptedKeys[app.pkg] != null) Pill(
+                    str(if (ignoring) R.string.key_ignore else R.string.key_check_on),
+                    { if (ignoring) { Prefs.acceptKey(app.pkg, acceptable!!); Installer.jobs.remove(app.id) } else Prefs.forgetKey(app.pkg); Device.tick++ },
+                    icon = if (ignoring) Icons.Shield else Icons.ShieldAlert,
+                )
                 if (browser) Pill("GitHub", { openRepo(ctx, app.repo) }, icon = Icons.Link)
                 if (notes != null) Pill(str(R.string.whats_new_short), { showNotes = true })
                 if (permissions.isNotEmpty()) Pill(str(R.string.permissions_action), { showPermissions = true })
